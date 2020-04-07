@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="website/images/favicon.ico">
+<title>Detail Garage Arizona</title>
+<!-- Bootstrap core CSS -->
+<link href="website/css/bootstrap.min.css" rel="stylesheet">
+<!-- Fonts CSS -->
+<link href="website/css/fonts.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,500,600,700,800,900" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+<!-- Slider Css -->
+<link rel='stylesheet' type="text/css" href='website/css/owl.carousel.min.css'>
+<link rel='stylesheet' type="text/css" href='website/css/owl.theme.default.min.css'>
+<!-- Custom styles -->
+<link href="website/css/style.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<!-- Header -->
+<header> 
+  <!-- Top Bar -->
+  <div class="topBar">
+    <div class="container">
+      <div class="row">
+        <aside class="col-sm-6 col-7">
+          <ul class="socials">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-google-plus-g"></i></a></li>
+            <li><a href="#"><i class="fab fa-pinterest-p"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+          </ul>
+        </aside>
+        {{ webDetails.first_name }}
+        <aside class="col-sm-6 col-5"> <a href="#" data-toggle="modal" data-target="#loginModal" class="loginSite"><i class="fas fa-lock"></i> Login / Register</a> </aside>
+      </div>
+    </div>
+  </div>
+  <!-- Logo Section -->
+  <div class="logoBar">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-3"> <a href="index.html" class="siteLogo"><img src="website/images/logo.png" class="img-fluid" alt=""></a> </div>
+        <div class="col-sm-9"> <a class="open-mypage1"><img src="website/images/search-icon.png"></a>
+          <div class="myCart"> <a href="#"> <img src="website/images/cart.png">
+            <div class="cartValue">My Cart <span>$0.00</span></div>
+            </a> </div>
+          <div id="mypage-info1">
+            <div class="searchBar">
+              <form action="" method="post">
+                <input name="" type="text" placeholder="Keywords here...">
+                <button type="submit"><img src="website/images/search-icon.png" alt=""></button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Navigation -->
+  <nav>
+    <div class="container">
+      <div class="siteMenus">
+        <ul>
+          <li><a href="" class="active">Chemical Guys</a></li>
+          <li><a href="">Smartwax</a></li>
+          <li><a href="">Accessories</a></li>
+          <li><a href="">Detailing Tools</a></li>
+          <li><a href="">Microfiber Towels</a></li>
+          <li><a href="">Motorcycle Line</a></li>
+          <li><a href="">Detailing Kits</a></li>
+          <li><a href="">Shirts &amp; Gear</a></li>
+          <li><a href="">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- This is default hbs page load functionality. Which you write in hbs page it load -->
+{{{body}}}
+
+
+
+<!-- Footer -->
+<footer>
+  <div class="footerMain">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-sm-6">
+          <h3>Customer service</h3>
+          <ul class="links">
+            <li><a href="#">About us</a></li>
+            <li><a href="#">General terms &amp; conditions</a></li>
+            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            <li><a href="#">Customer support</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <h3>Products</h3>
+          <ul class="links">
+            <li><a href="#">All products</a></li>
+            <li><a href="#">New products</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <h3> My account</h3>
+          <ul class="links">
+            <li><a href="#">Register</a></li>
+            <li><a href="#">My orders</a></li>
+            <li><a href="#">My wishlist</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-sm-6">
+          <h3>Store Information</h3>
+          <ul class="conInfo">
+            <li><i class="fas fa-map-marker-alt"></i>406 Kamehamesha Highway Pearl City, Hawaii 96782</li>
+            <li><i class="fas fa-phone"></i>808-773-7362</li>
+            <li><a href="#"><i class="far fa-envelope"></i>sales@yourcompany.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="copyRight">
+    <div class="container">&copy; 2019 detailgarage.com. All Rights Reserved. </div>
+  </div>
+</footer>
+
+<!-- Login Modal -->
+<div class="modal popUp" id="loginModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="mdLeft">
+          <div class="popupOverlay">
+            <figure><img src="images/logo.png" class="img-fluid" alt=""></figure>
+            <h3>Sign in</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          </div>
+        </div>
+        <div class="mdRight">
+          <ul class="topLinks">
+            <li><a href="#" class="active" data-toggle="modal" data-target="#loginModal" data-dismiss="modal">Log in</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#signUp" data-dismiss="modal">Sign Up</a></li>
+          </ul>
+          <div class="formBlock">
+            <form action="login" method="post">
+              <div class="form-group">
+                <label>Email id <span>*</span></label>
+                <input name="email" type="email" class="inpField" placeholder="jonthandoe@gmail.com" required>
+              </div>
+              <div class="form-group">
+                <label>Enter Password <span>*</span></label>
+                <input name="password" type="password" class="inpField" placeholder="password" required>
+              </div>
+              <div class="row">
+                <aside class="col-sm-6">
+                  <div class="cusCheck">
+                    <label>
+                      <input type="checkbox" checked>
+                      Remember Password <span class="checkmark"></span> </label>
+                  </div>
+                </aside>
+                <aside class="col-sm-6"><a href="#" class="forGot" data-toggle="modal" data-target="#forgotModal" data-dismiss="modal">Forgot Password ?</a></aside>
+              </div>
+              <div class="row btnRow">
+                <aside class="col-sm-6">
+                  <button type="submit" class="subMit">Login</button>
+                </aside>
+                <aside class="col-sm-6"><a href="#" class="loginWith"><i class="fab fa-facebook-f"></i> Login With Facebook</a></aside>
+              </div>
+            </form>
+          </div>
+          <div class="register">Don't have an account, <a href="#" data-toggle="modal" data-target="#signUp" data-dismiss="modal">Register Here</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Signup Modal -->
+<div class="modal popUp" id="signUp">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="mdLeft">
+          <div class="popupOverlay">
+            <figure><img src="images/logo.png" class="img-fluid" alt=""></figure>
+            <h3>Sign Up</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          </div>
+        </div>
+        <div class="mdRight btnChange">
+          <ul class="topLinks">
+            <li><a href="#" data-toggle="modal" data-target="#loginModal" data-dismiss="modal">Log in</a></li>
+            <li><a href="#"  class="active" data-toggle="modal" data-target="#signUp" data-dismiss="modal">Sign Up</a></li>
+          </ul>
+          <div class="formBlock">
+            {{#if web_messages.error}}
+              <div class="alert alert-danger">{{ web_messages.error }}</div>
+            {{/if}}
+            {{#if web_messages.success}}
+              <div class="alert alert-success">{{ web_messages.success }}</div>
+            {{/if}}
+            <form action="signup" method="post">
+              <div class="row">
+                <aside class="col-sm-6">
+                  <div class="form-group">
+                    <label>First Name <span>*</span></label>
+                    <input name="first_name" type="text" class="inpField" placeholder="jonthan" required>
+                  </div>
+                </aside>
+                <aside class="col-sm-6">
+                  <div class="form-group">
+                    <label>Last Name <span>*</span></label>
+                    <input name="last_name" type="text" class="inpField" placeholder="doe" required>
+                  </div>
+                </aside>
+              </div>
+              <div class="row">
+                <aside class="col-sm-6">
+                  <div class="form-group">
+                    <label>Email id <span>*</span></label>
+                    <input name="email" type="email" class="inpField" placeholder="jonthandoe@gmail.com" required>
+                  </div>
+                </aside>
+                <aside class="col-sm-6">
+                  <div class="form-group">
+                    <label>Contact no. <span>*</span></label>
+                    <input name="mobile" type="text" class="inpField" placeholder="91-9874563210" required>
+                  </div>
+                </aside>
+              </div>
+              <div class="row">
+                <aside class="col-sm-6">
+                  <div class="form-group">
+                    <label>Password <span>*</span></label>
+                    <input name="password" type="password" class="inpField" placeholder="password" required>
+                  </div>
+                </aside>
+                <aside class="col-sm-6">
+                  <div class="form-group">
+                    <label>Confirm Password <span>*</span></label>
+                    <input name="confirm_password" type="text" class="inpField" placeholder="confirm password" required>
+                  </div>
+                </aside>
+              </div>
+              <div class="row">
+                <aside class="col-sm-12">
+                  <div class="cusCheck">
+                    <label>
+                      <input type="checkbox" checked>
+                      I Accept Terrms & Conditions <span class="checkmark"></span> </label>
+                  </div>
+                </aside>
+              </div>
+              <div class="row btnRow">
+                <aside class="col-sm-6">
+                  <button type="submit" class="subMit">Submit</button>
+                </aside>
+              </div>
+            </form>
+          </div>
+          <div class="register">Already have an account, <a href="#" data-toggle="modal" data-target="#loginModal" data-dismiss="modal">Login Here</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Forgot Modal -->
+<div class="modal popUp" id="forgotModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <div class="mdLeft">
+          <div class="popupOverlay">
+            <figure><img src="images/logo.png" class="img-fluid" alt=""></figure>
+            <h3>Forgot Password</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+          </div>
+        </div>
+        <div class="mdRight">
+          <ul class="topLinks">
+            <li><a href="#" class="active" data-toggle="modal" data-target="#loginModal" data-dismiss="modal">Log in</a></li>
+            <li><a href="#" data-toggle="modal" data-target="#signUp" data-dismiss="modal">Sign Up</a></li>
+          </ul>
+          <div class="formBlock">
+            <form action="" method="post">
+              <div class="form-group">
+                <label>Email id <span>*</span></label>
+                <input name="" type="text" class="inpField" placeholder="jonthandoe@gmail.com" required>
+              </div>
+              <div class="row btnRow">
+                <aside class="col-sm-6">
+                  <button type="submit" class="subMit">Submit</button>
+                </aside>
+                <aside class="col-sm-6"><a href="#" class="loginWith"><i class="fab fa-facebook-f"></i> Login With Facebook</a></aside>
+              </div>
+            </form>
+          </div>
+          <div class="register">Don't have an account, <a href="#" data-toggle="modal" data-target="#signUp" data-dismiss="modal">Register Here</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- jQuery library --> 
+<script src="website/js/jquery.min.js"></script> 
+<!-- Bootstrap JS --> 
+<script src="website/js/popper.min.js"></script> 
+<script src="website/js/bootstrap.min.js"></script> 
+<!-- jQuery for menu --> 
+<script type="text/javascript" src="website/js/menu.js"></script> 
+<script type="text/javascript">
+    jQuery(document).ready(function($) {
+      jQuery('.siteMenus').stellarNav({
+        breakpoint:767,
+        position: 'right',
+      });
+    });
+  </script> 
+<!-- jQuery for Sliders --> 
+<script src='website/js/owl.carousel.js'></script> 
+<script>$(document).ready(function() {$("#slide").owlCarousel({items : 1,nav:false,dots:true,loop:true,autoplay:true,autoplayTimeout:4000,smartSpeed:1800,autoplayHoverPause:false});});
+</script> 
+<script>
+$('#products1,#products2').owlCarousel({        
+margin:20, 
+dots:false,
+nav:true,
+loop:true,      
+autoplay:false,
+autoplayTimeout:4500,smartSpeed:700,
+singleItem:true,
+navText: ["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],
+responsiveClass:true,
+responsive:{0:{items:1,},480:{items:2,},768:{items:3,},1000:{items:4,},1400:{items:4,}            
+}});
+</script> 
+<script>
+$('#testi').owlCarousel({        
+margin:70, 
+dots:true,
+nav:false,
+loop:true,      
+autoplay:true,
+autoplayTimeout:4500,smartSpeed:700,
+singleItem:true,
+navText: ["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],
+responsiveClass:true,
+responsive:{0:{items:1,},480:{items:1,},768:{items:2,},1000:{items:2,},1400:{items:2,}            
+}});
+</script> 
+<script>
+$('.open-mypage1,#mypage-info1 button').click(toggleDiv);
+function toggleDiv(){
+ $('#mypage-info1').slideToggle('2000', "swing", function () {
+    });
+}
+</script>
+</body>
+</html>

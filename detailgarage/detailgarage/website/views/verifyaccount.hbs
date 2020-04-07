@@ -1,0 +1,5 @@
+{{#ifEquals  data.status 1 }}
+    <p>Your account has been verified successfully. Click here to go to <a href={{data.homepage}}>homepage</a></p>
+{{else}}
+    {{data.homepage}}
+{{/ifEquals}}

@@ -1,0 +1,87 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>Edit Order Details</h1>
+        <ol class="breadcrumb">
+            <li><a href="/admin"><i class="fa fa-dashboard"></i>Home</a></li>
+            <li class="active"><a href="/admin/testimonial">Order</a></li>
+            <li class="active">Edit Order Detail</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-8">
+                <div class="box">
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        {{#if messages.error}}
+                        <div class="alert alert-danger">{{ messages.error }}</div>
+                        {{/if}}
+                        {{#if messages.success}}
+                        <div class="alert alert-success">{{ messages.success }}</div>
+                        {{/if}}
+                        <!-- form start -->
+                        <form action="/admin/order/updaterecord" method="post" id="myForm" enctype="multipart/form-data">
+                            <input type="hidden" name="id" value="{{data.id}}" />
+
+                            <div class="box-body">
+
+                                <div class="form-group">
+                                    <label for="name">Name<span style="color: #ff0000">*</span></label>
+                                    <input class="form-control" id="name" name="name" placeholder="User Name" type="text"
+                                        readonly value={{#if data.full_name}} "{{data.full_name}}" {{else}} "" {{/if}}>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="name">Transaction No<span style="color: #ff0000">*</span></label>
+                                    <input class="form-control" id="txn_no" name="txn_no" placeholder="" type="text"
+                                        readonly value={{#if data.transaction_no}} "{{data.transaction_no}}" {{else}} "" {{/if}}>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="name">Quantity<span style="color: #ff0000">*</span></label>
+                                    <input class="form-control" id="quantity" name="quantity" placeholder="" type="text"
+                                        readonly value={{#if data.totQuantity}} "{{data.totQuantity}}" {{else}} "" {{/if}}>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="name">Total Amount<span style="color: #ff0000">*</span></label>
+                                    <input class="form-control" id="total_amount" name="total_amount" placeholder="" type="text"
+                                        readonly value={{#if data.total_amount}} "{{data.total_amount}}" {{else}} "" {{/if}}>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Select Status<span style="color: #ff0000">*</span></label>
+                                    <select class="form-control" id="status" name="status">
+                                        <option value="">Please Select Status</option>
+                                        <option value="2" {{#ifEquals data.status 2 }} selected="selected"
+                                            {{/ifEquals}}>Canceled</option>
+                                        <option value="1" {{#ifEquals data.status 1 }} selected="selected"
+                                            {{/ifEquals}}>Delevered</option>
+                                        <option value="0" {{#ifEquals data.status 0 }} selected="selected"
+                                            {{/ifEquals}}>In Process</option>
+                                    </select>
+                                </div>
+
+                                <div class="box-footer">
+                                    <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                                    <a href="/admin/order" name="cancel" class="btn btn-warning pull-right">Cancel</a>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>

@@ -1,0 +1,98 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>Order Details</h1>
+        <ol class="breadcrumb">
+            <li><a href="/admin"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Order Details</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="">
+            {{!-- <div className="alert alert-success">Your order has been confirmed, see details !!</div> --}}
+                <div class="row">
+                    <div class="col-12">
+
+                        <div class="table-responsive">
+                            <table class="table crTable" id="cartItems">
+                                <thead>
+                                    <tr>
+                                        <th colspan="2">Transaction No</th>
+                                        <th>{{data.0.transaction_no}}</th>                                        
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">Amount</th>
+                                        <th>${{data.0.totalAmt}}</th>                                        
+                                    </tr>
+
+                                    {{#ifEquals data.0.shipping_type 'delivery'}}
+                                    <tr>
+                                        <th colspan="2">Delivary Charge</th>
+                                        <th>${{data.0.shipping_amount}}</th>                                        
+                                    </tr>
+                                    {{/ifEquals}}
+
+                                    <tr>
+                                        <th colspan="2">Sub Total</th>
+                                        <th>${{data.0.total_amount}}</th>                                        
+                                    </tr>
+
+                                    {{#ifEquals data.0.shipping_type 'delivery'}}
+                                    <tr>
+                                        <th colspan="2">Delivary Type</th>
+                                        <th>Standered Delivery</th>                                        
+                                    </tr>
+                                    <tr>
+                                        <th colspan="2">Shipping Address</th>
+                                        <th>{{shippingAddress}}</th>                                        
+                                    </tr>
+                                    {{/ifEquals}}
+
+                                    {{#ifEquals data.0.shipping_type 'self'}}
+                                    <tr>
+                                        <th colspan="2">Delivary Type</th>
+                                        <th>Self Delivery</th>                                        
+                                    </tr>
+                                    {{/ifEquals}}
+
+                                </thead>                                
+                            </table>
+                        </div>
+                        <div class="box">
+                        <div class="table-responsive">
+                            <table class="table crTable table-bordered table-striped" id="cartItems">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Price</th>
+                                        <th>Quantity</th>
+                                        {{!-- <th colspan="2">Sub Total</th> --}}
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {{#each data}}
+                                       
+                                        <tr>
+                                            <td data-label="Product"><figure class="prodImg"><img height="50" width="50" src={{../image_path}}{{image}} /></figure> <h4 class="prodTitle">{{product_name}}</h4></td>
+                                            <td data-label="Price" >{{price}}</td>
+                                            <td data-label="Quantity" >{{quantity}}</td>
+                                            {{!-- <td data-label="Total"> {{total_amount}}</td> --}}
+                                        </tr>
+                                    {{/each}}
+
+                                    
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->

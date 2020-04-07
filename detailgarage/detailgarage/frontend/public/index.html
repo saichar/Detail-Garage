@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/assets/website/images/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    
+    <!-- Bootstrap core CSS -->
+    <link href="%PUBLIC_URL%/assets/website/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Fonts CSS -->
+    <link href="%PUBLIC_URL%/assets/website/css/fonts.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+    <!-- Slider Css -->
+    <link rel='stylesheet' type="text/css" href='%PUBLIC_URL%/assets/website/css/owl.carousel.min.css'>
+    <link rel='stylesheet' type="text/css" href='%PUBLIC_URL%/assets/website/css/owl.theme.default.min.css'>
+    <link rel='stylesheet' type="text/css" href='%PUBLIC_URL%/assets/website/css/easy-responsive-tabs.css'>
+
+    <link rel='stylesheet' type="text/css" href='%PUBLIC_URL%/assets/website/css/jquery-ui.css'>
+    <link rel='stylesheet' type="text/css" href='%PUBLIC_URL%/assets/website/css/simplebar.css'>
+
+    <!-- Custom styles -->
+    <link href="%PUBLIC_URL%/assets/website/css/style.css" rel="stylesheet" type="text/css">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <link href="https://cdn.jsdelivr.net/npm/react-s-alert@1.4.1/dist/s-alert-default.css" rel="stylesheet" type="text/css">
+    <title>Detail Garage</title>
+
+
+    <script src="https://js.stripe.com/v3/"></script>
+    
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+
+    <!-- jQuery library --> 
+    <script src="%PUBLIC_URL%/assets/website/js/jquery.min.js"></script> 
+    <!-- Bootstrap JS --> 
+    <script src="%PUBLIC_URL%/assets/website/js/popper.min.js"></script>
+    <script src="%PUBLIC_URL%/assets/website/js/bootstrap.min.js"></script> 
+    <!-- jQuery for menu --> 
+    <script type="text/javascript" src="%PUBLIC_URL%/assets/website/js/menu.js"></script> 
+
+    
+
+    <script type="text/javascript" src="%PUBLIC_URL%/assets/website/js/simplebar.js"></script> 
+    <script type="text/javascript" src="%PUBLIC_URL%/assets/website/js/jquery-ui.min.js"></script> 
+    <script type="text/javascript" src="%PUBLIC_URL%/assets/website/js/price_range_script.js"></script> 
+
+    <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        jQuery('.siteMenus').stellarNav({
+          breakpoint:767,
+          position: 'right',
+        });
+      });
+    </script> 
+    <!-- jQuery for Sliders --> 
+    <script src='%PUBLIC_URL%/assets/website/js/owl.carousel.js'></script>
+    
+    
+    
+    <script>
+    $(document).ready(function() {
+        $("#slide").owlCarousel({items : 1,nav:false,dots:true,loop:true,autoplay:true,autoplayTimeout:4000,smartSpeed:1800,autoplayHoverPause:false});
+    });
+      
+    
+    $(document).ready(function() {
+      $('#products1,#products2').owlCarousel({        
+        margin:20, 
+        dots:false,
+        nav:true,
+        loop:true,      
+        autoplay:false,
+        autoplayTimeout:4500,smartSpeed:700,
+        singleItem:true,
+        navText: ["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],
+        responsiveClass:true,
+        responsive:{0:{items:1,},480:{items:2,},768:{items:3,},1000:{items:4,},1400:{items:4,}            
+      }});
+    });
+    
+    $(document).ready(function() {
+      $('#testi').owlCarousel({        
+        margin:70, 
+        dots:true,
+        nav:false,
+        loop:true,      
+        autoplay:true,
+        autoplayTimeout:4500,smartSpeed:700,
+        singleItem:true,
+        navText: ["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],
+        responsiveClass:true,
+        responsive:{0:{items:1,},480:{items:1,},768:{items:2,},1000:{items:2,},1400:{items:2,}            
+      }});
+    });
+    
+    $(document).ready(function(){
+      $('.open-mypage1,#mypage-info1 button').click(toggleDiv);
+      function toggleDiv(){
+        $('#mypage-info1').slideToggle('2000', "swing", function () {
+        });
+      }
+    });
+
+
+    $(document).ready(function(){
+      $(".open-mypage2").click(function(){
+        $("#mypage-info2").slideToggle();
+      });
+      $(".up").click(function(){
+        $("#mypage-info2").slideToggle();
+      });
+    });
+
+    $(document).ready(function(){
+        // Add minus icon for collapse element which is open by default
+        $(".collapse.show").each(function(){
+        	$(this).prev(".card-header").find(".fa").addClass("fa-minus").removeClass("fa-plus");
+        });
+        
+        // Toggle plus minus icon on show hide of collapse element
+        $(".collapse").on('show.bs.collapse', function(){
+        	$(this).prev(".card-header").find(".fa").removeClass("fa-plus").addClass("fa-minus");
+        }).on('hide.bs.collapse', function(){
+        	$(this).prev(".card-header").find(".fa").removeClass("fa-minus").addClass("fa-plus");
+        });
+    });
+
+    
+
+    jQuery(document).ready(function($) {
+		// This button will increment the value
+      $('.qtyplus').click(function(e){
+        // Stop acting like a button
+        e.preventDefault();
+        // Get the field name
+        fieldName = $(this).attr('field');
+        // Get its current value
+        var currentVal = parseInt($('input[name='+fieldName+']').val());
+        // If is not undefined
+        if (!isNaN(currentVal)) {
+          // Increment
+          $('input[name='+fieldName+']').val(currentVal + 1);
+        } else {
+          // Otherwise put a 0 there
+          $('input[name='+fieldName+']').val(0);
+        }
+      });
+    });
+
+    jQuery(document).ready(function($) {
+		// This button will decrement the value till 0
+      $(".qtyminus").click(function(e) {
+        // Stop acting like a button
+        e.preventDefault();
+        // Get the field name
+        fieldName = $(this).attr('field');
+        // Get its current value
+        var currentVal = parseInt($('input[name='+fieldName+']').val());
+        // If it isn't undefined or its greater than 0
+        if (!isNaN(currentVal) && currentVal > 0) {
+          // Decrement one
+          $('input[name='+fieldName+']').val(currentVal - 1);
+        } else {
+          // Otherwise put a 0 there
+          $('input[name='+fieldName+']').val(0);
+        }
+      });
+    });
+
+    </script>
+    <script src='%PUBLIC_URL%/assets/website/js/easyResponsiveTabs.js'></script>
+    <script>
+    $(document).ready(function() {
+        //Horizontal Tab
+        $('#parentHorizontalTab').easyResponsiveTabs({
+            type: 'default', //Types: default, vertical, accordion
+            width: 'auto', //auto or any width like 600px
+            fit: true, // 100% fit in a container
+            tabidentify: 'hor_1', // The tab groups identifier
+            activate: function(event) { // Callback function if tab is switched
+                var $tab = $(this);
+                var $info = $('#nested-tabInfo');
+                var $name = $('span', $info);
+                $name.text($tab.text());
+                $info.show();
+            }
+        });
+    });
+
+    </script>
+  </body>
+</html>

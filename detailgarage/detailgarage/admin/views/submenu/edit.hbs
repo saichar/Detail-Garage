@@ -1,0 +1,77 @@
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>Edit Submenu</h1>
+        <ol class="breadcrumb">
+            <li><a href="/admin"><i class="fa fa-dashboard"></i>Home</a></li>
+            <li class="active"><a href="/admin/submenu">Submenu</a></li>
+            <li class="active">Edit Submenu</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-8">
+                <div class="box">
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        {{#if messages.error}}
+                        <div class="alert alert-danger">{{ messages.error }}</div>
+                        {{/if}}
+                        {{#if messages.success}}
+                        <div class="alert alert-success">{{ messages.success }}</div>
+                        {{/if}}
+                        <!-- form start -->
+                        <form action="/admin/submenu/updaterecord" method="post" id="myForm">
+                            <input type="hidden" name="id" value="{{data.id}}" />
+
+                            <div class="box-body">
+
+                                <div class="form-group">
+                                    <label>Select Menu<span style="color: #ff0000">*</span></label>
+                                    <select class="form-control" id="menu" name="menu">
+                                        {{!-- {{#each data}} --}}
+                                        <option value="{{data.menu_id}}" />{{data.menu_name}}</option>
+                                        {{!-- <option value="{{this.id}}" />{{this.name}}</option> --}}
+                                        {{!-- {{/each}} --}}
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="name">Name<span style="color: #ff0000">*</span></label>
+                                    <input class="form-control" id="name" name="name" placeholder="Submenu Name" type="text"
+                                        required="required" value={{#if data.name}} "{{data.name}}" {{else}} "" {{/if}}>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Select Status<span style="color: #ff0000">*</span></label>
+                                    <select class="form-control" id="status" name="status">
+                                        <option value="">Please Select Status</option>
+                                        <option value="1" {{#ifEquals data.status 1 }} selected="selected"
+                                            {{/ifEquals}}>Active</option>
+                                        <option value="0" {{#ifEquals data.status 0 }} selected="selected"
+                                            {{/ifEquals}}>In Active</option>
+                                    </select>
+                                </div>
+
+                                <div class="box-footer">
+                                    <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+                                    <a href="/admin/submenu" name="cancel" class="btn btn-warning pull-right">Cancel</a>
+                                </div>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- /.box-body -->
+            </div>
+            <!-- /.box -->
+        </div>
+        <!-- /.col -->
+
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>
