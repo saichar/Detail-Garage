@@ -39,4 +39,7 @@
   "devDependencies": {
     "nodemon": "^1.19.1"
   }
+  "scripts": {
+    "start": "node your-script.js"
+}
 }
