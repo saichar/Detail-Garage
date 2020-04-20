@@ -1,5 +1,4 @@
 export const Environment ={
-  apiurl:'https://detailgarage.sourcesoftsolutions.com:8018',
-  weburl:'https://detailgarage.sourcesoftsolutions.com',    
+  apiurl:'http://192.168.0.236/:9133',
+  weburl:'http://192.168.0.236/:9132',    
 };
-   
