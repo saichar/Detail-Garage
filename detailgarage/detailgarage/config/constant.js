@@ -5,7 +5,7 @@
 const front_base_url = 'http://192.168.0.236/:9133';
 const base_url = 'http://192.168.0.236/:9132';
 module.exports = Object.freeze({
-    PORT: 8018,
+    PORT: 9133,
     SITE_NAME: "Detail Garage",
     PAGE_LIMIT: 10,
     PAGE_SIZE: 10,
