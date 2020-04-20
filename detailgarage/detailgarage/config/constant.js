@@ -1,6 +1,9 @@
-const base_url = 'https://detailgarage.sourcesoftsolutions.com:8018';
-const front_base_url = 'https://detailgarage.sourcesoftsolutions.com';
-
+// const base_url = 'http://localhost:8018';
+// const front_base_url = 'http://localhost:8017';
+// const base_url = 'https://detailgarage.sourcesoftsolutions.com:8018';
+// const front_base_url = 'https://detailgarage.sourcesoftsolutions.com';
+const front_base_url = 'http://192.168.0.236/:9133';
+const base_url = 'http://192.168.0.236/:9132';
 module.exports = Object.freeze({
     PORT: 8018,
     SITE_NAME: "Detail Garage",
@@ -8,7 +11,7 @@ module.exports = Object.freeze({
     PAGE_SIZE: 10,
     BASE_URL: base_url,
     FRONT_BASE_URL: front_base_url,
-
+    SITE_URL : "http://localhost/detailgarage/lightspeedapi.php",
     
     // Show pic path
     SHOW_LOGO_PIC: base_url + "/images/logo.png",
@@ -26,6 +29,7 @@ module.exports = Object.freeze({
     // SHOW_FRONT_NO_PRODUCTS_PIC: front_base_url + "/products/noimage.jpeg",
     SHOW_FRONT_PRODUCTS_PIC: base_url + "/products/",
     SHOW_FRONT_NO_PRODUCTS_PIC: base_url + "/products/noimage.jpeg",
+    
 
  
     // SMTP Details
