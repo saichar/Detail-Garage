@@ -6,7 +6,7 @@ RUN apt-get install -y nginx
 
 RUN mkdir /App
 
-COPY . /App
+COPY ./build /App
 
 COPY nginx.conf /etc/nginx/sites-enabled/default
 
