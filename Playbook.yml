@@ -1,0 +1,40 @@
+- hosts: 192.168.0.240
+  become: true
+  #become_user: devopsadmin
+
+  tasks:
+    - name: log into docker hub registry
+      docker_login:
+        email: "saidevops846@gmail.com"
+        username: "saidevops846"
+        password: "xxxxxx"
+
+    - name: pull an Image
+      docker_image:
+        name: "saidevops846/detail-garage:frontend"
+        source: pull
+        force_source: yes
+
+    - name: pull an Image
+      docker_image:
+        name: "saidevops846/detail-garage:backend"
+        source: pull
+        force_source: yes
+
+    - name: ensure a container is running
+      docker_container:
+        name: my-container
+        state: started
+        image: "saidevops846/detail-garage:frontend"
+        pull: true
+        ports:
+          - "9123:80"
+
+    - name: ensure a container is running
+      docker_container:
+        name: my-backend
+        state: started
+        image: "saidevops846/detail-garage:backend"
+        pull: true
+        ports:
+          - "9132:8018"
