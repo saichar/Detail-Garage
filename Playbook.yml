@@ -1,13 +1,13 @@
 - hosts: 192.168.0.240
   become: true
-  #become_user: devopsadmin
+  become_user: root
 
   tasks:
     - name: log into docker hub registry
       docker_login:
         email: "saidevops846@gmail.com"
         username: "saidevops846"
-        password: "xxxxxx"
+        password: "xxxxx"
 
     - name: pull an Image
       docker_image:
