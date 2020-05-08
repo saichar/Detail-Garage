@@ -7,7 +7,7 @@
       docker_login:
         email: "saidevops846@gmail.com"
         username: "saidevops846"
-        password: "Charan@2015"
+        password: "xxxxx"
 
     - name: pull an Image
       docker_image:
