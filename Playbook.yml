@@ -6,7 +6,7 @@
     - name: log into docker hub registry
       docker_login:
         email: "saidevops846@gmail.com"
-        username: "saidevops846"
+        username: "xxxxx"
         password: "xxxxx"
 
     - name: pull an Image
