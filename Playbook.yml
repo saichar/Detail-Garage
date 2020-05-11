@@ -6,8 +6,8 @@
     - name: log into docker hub registry
       docker_login:
         email: "saidevops846@gmail.com"
-        username: "saidevops846"
-        password: "Charan@2015"
+        username: "{{ dockerhub_username }}"
+        password: "{{ dockerhub_password }}"
 
     - name: pull an Image
       docker_image:
