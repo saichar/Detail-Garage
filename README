@@ -1,1 +1,1 @@
-http://192.168.0.236:8082/job/ansible-pipeline/badge/icon
+[![Build Status](http://192.168.0.236:8082/buildStatus/icon?job=ansible-pipeline)](http://192.168.0.236:8082/job/ansible-pipeline/)
